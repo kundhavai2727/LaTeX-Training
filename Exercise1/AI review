@@ -1,0 +1,179 @@
+Great job uploading it! 🔥
+I went through your file, and here’s your **professional-style review**, just like how a real LaTeX mentor or client would give feedback.
+
+I’ll divide it into:
+
+1. **What you did well**
+2. **What needs improvement**
+3. **Corrections + suggestions**
+4. **Your next micro-task before Exercise 2**
+
+---
+
+# ✅ 1. What you did really well
+
+* ✔ You structured the report correctly
+* ✔ You used mathematical notation confidently
+* ✔ You included images and tables
+* ✔ You used citations (good start!)
+* ✔ Document compiles without errors
+* ✔ Very neat and clean layout
+
+You’re already working above beginner level.
+For Exercise 1, this is a strong submission.
+
+---
+
+# ⚠️ 2. Areas to improve
+
+These are NOT mistakes — just improvements that transform your LaTeX from *“student level” → “professional level”*.
+
+### **(1) No title page / abstract page**
+
+You used `\maketitle`, but a proper academic report needs a separate title page, often centered.
+
+### **(2) Missing `\tableofcontents`**
+
+You wrote the sections well, but clients expect a contents page.
+
+### **(3) Hyperlinks should be colored and functional**
+
+Right now, you added `hyperref` but you didn’t configure it.
+
+### **(4) Equation numbering / referencing could be improved**
+
+### **(5) Table formatting can be better**
+
+Using basic `tabular` works, but intermediate LaTeX expects cleaner:
+
+* column spacing
+* header boldness
+* centering vertically
+
+### **(6) Images need size control**
+
+Your image fits well, but later clients will ask:
+
+* “make this exactly 0.8× text width”
+* “align two images in one row”
+
+So we’ll refine this.
+
+---
+
+# 🛠 3. Corrections + Improvements You Should Apply
+
+I’ll give you exact snippets to improve your assignment.
+(These are not required for the grade—just to upgrade your skills.)
+
+---
+
+## **(A) Better Title Page**
+
+Replace your current title area with:
+
+```latex
+\begin{titlepage}
+    \centering
+    \vspace*{3cm}
+
+    {\Huge \textbf{The Future of Artificial Intelligence} \par}
+    \vspace{1cm}
+    {\Large Kundhavai M \\ Department of Computer Science \par}
+
+    \vfill
+    {\large \today}
+\end{titlepage}
+```
+
+---
+
+## **(B) Add a Table of Contents**
+
+Put this after `\begin{document}`:
+
+```latex
+\pagenumbering{roman}
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+```
+
+---
+
+## **(C) Configure Hyperref**
+
+Add this to preamble:
+
+```latex
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=teal,
+    urlcolor=magenta
+}
+```
+
+---
+
+## **(D) Improve Table**
+
+Use `tabularx`:
+
+```latex
+\begin{table}[h]
+\centering
+\begin{tabularx}{0.9\textwidth}{l X c}
+\hline
+\textbf{Model} & \textbf{Description} & \textbf{Accuracy} \\
+\hline
+Linear Regression & Predicts continuous variables using linear combinations. & 85\% \\
+Decision Trees & Hierarchical model with branching structure. & 92\% \\
+Neural Networks & Multi-layer model for complex patterns. & 97\% \\
+\hline
+\end{tabularx}
+\caption{Comparison of ML Models}
+\end{table}
+```
+
+---
+
+## **(E) Format Equations Using `align`**
+
+```latex
+\begin{align}
+y &= mx + b \\
+E &= mc^2
+\end{align}
+```
+
+---
+
+# 🎯 4. Your next *micro-task* before Exercise 2
+
+**Update Exercise 1 with these 3 improvements:**
+
+1. proper title page
+2. table of contents
+3. hyperref setup
+
+These are small but essential improvements.
+
+Once done:
+
+> Send your updated repo link and say:
+> **“Exercise 1 updated — ready for re-review.”**
+
+---
+
+# 🌟 Final Note
+
+You’re progressing *exactly* the right way:
+→ submitting
+→ getting feedback
+→ improving
+→ moving to next exercise
+
+This is the “professional feedback loop” that builds mastery.
+
+Whenever you want, I’ll give you the Exercise 2 official specifications.
