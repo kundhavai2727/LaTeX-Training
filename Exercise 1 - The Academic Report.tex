@@ -1,0 +1,101 @@
+\documentclass{article}[12pt]
+\usepackage{graphicx} % Required for inserting images
+\usepackage{verbatim} % For writing code
+\usepackage{amsmath} % For writing maths
+\usepackage{cite} % For citations
+\usepackage{hyperref} % For links
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan
+    }
+
+\title{Exercise 1: The Academic Report}
+\author{Kundhavai M}
+\date{03 December 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+In this document, I will be writing on \LaTeX. This will be useful for beginners. I hope the contents are understandable. I have set the timer to one hour. I think I will finish at least 3 sections before the time ends. Please note that whatever I have written is truly based on my knowledge, mistakes might happen.
+
+\section{Syntax}
+The basic template and syntax for any document would be: 
+\begin{verbatim}
+    \documentclass{article}[you may enter the size of font here]
+    
+    % packages if required, for example
+    \usepackage{graphicx} % used mainly for images
+
+    \title{Title of your document}
+    \author{Who's writing this?}
+    \date{the date}
+
+    \begin{document}
+        \maketitle
+
+        \section{Introduction}
+            \subsection{The subsection}
+                \subsubsection{You can make as many sub section as you want}
+
+    %optional
+        \begin{bibliography}
+        \end{bibliography}
+    \end{document}
+\end{verbatim}
+
+I have displayed the code using \textbf{verbatim}. You can also do this by including your code in:
+
+\verb|\begin{verbatim}| \\
+\hspace*{3em}\verb|% your code| \\
+\hspace*{1.5em}\verb|\end{verbatim}|
+
+\subsection{Bibliography}
+For bibliography:
+\begin{verbatim}
+% use cite for bibliography
+\begin{thebibliography}{99} % 99 denotes that the label are upto 99,
+                            so please leave identation accordingly.
+
+\bibitem{Label 1}
+The reference, Author name, Year
+
+\bibitem{Label 2}
+The reference, Author name, Year
+
+\end{thebibliography}
+\end{verbatim}
+
+\subsection{Some useful tags}
+\verb|\Latex| \longrightarrow \LaTeX \\
+\verb|\href{www.google.com}{Google}| \longrightarrow \href{www.google.com}{Google} \\
+\verb|\textbf{Sigma}| \longrightarrow \textbf{Sigma} \\
+\verb|\hspace*{3em}ABC| \longrightarrow \hspace*{3em}ABC \\
+
+\section{End Statement}
+There are 4 more minutes left. I already feel tired now. My brain is totally drained. I could not finish the second page fully. I will try to do the next exercise fully. Let's see. Two more minutes left. What shall I do?? \\
+I think that I am just filling the page with random texts. One more minute. I will simply wait for the time to end.
+\\
+\\
+It's exact 09:03 and I am winding it up.
+
+$$THANK \; YOU!!$$
+
+\begin{thebibliography}{99}
+\bibitem{The Doc}
+\href{https://3.mirrors.in.sahilister.net/ctan/macros/latex/required/graphics/grfguide.pdf}{D.P. Carlisle (2025) \emph{Packages in the 'graphics' bundle} The \LaTeX Project}
+
+\bibitem{overleaf}
+\href{https://www.overleaf.com/learn/latex/Bibliography_management_with_bibtex}{\emph{Bibliography management with bibtex} Overleaf Tutorials (2025)}
+
+\bibitem{AI}
+My AI buddies
+\end{thebibliography}
+
+\end{document}
+
+
