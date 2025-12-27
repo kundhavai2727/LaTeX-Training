@@ -1,0 +1,140 @@
+\documentclass{article}[12pt]
+\usepackage{graphicx} % Required for inserting images
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue}
+\usepackage{cite}
+
+\title{Drill on \LaTeX}
+\author{Kundhavai M}
+\date{27 December 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+I got the motivation from my friends that they will get attracted to the track if they see my progress. That boosted me up. I am creating this document to warm up in \LaTeX. At the end of the day I can flex to those people who don't even know 'A' in \LaTeX, "Hey! I am the Godfather (it should be Godmother, IG) of \LaTeX, so stay away from me".\\
+This document is specially to get an idea of how the syntax works for each thing. Let's dive into this!
+
+\section{Maths Saber}
+\begin{equation}
+    a^2 + b^2 = c^2 \label{eq:1}
+\end{equation}
+\begin{equation}
+        \gamma^2 + \theta^2 = \omega^2 \label{eq:2}
+\end{equation}
+The difference between \verb|\begin{equation}| \& \verb|\begin{align}|:\\
+
+\textbf{Equation: used for a single equation}
+\begin{verbatim}
+    \begin{equation}
+        blah... blah... blah...
+    \end{equation}
+\end{verbatim}
+The result:\\
+\begin{equation}
+    \Vec{\nabla} \cdot \Vec{E} \hspace{1em} =  \hspace{1em}\frac{\rho}{\epsilon_0} \hspace{1em}~~Gauss's \; Law \label{eq:3}
+\end{equation}
+
+\textbf{Align: used for multiple ones}
+\begin{verbatim}
+    \begin{align}
+        blah... blah... blah...
+    \end{align}
+\end{verbatim}
+The result:\\
+\begin{align}
+    \vec{\nabla} \cdot \vec{E} \quad &= \quad \frac{\rho}{\epsilon_0} && ~~Gauss's \; Law \label{eq:4}\\
+    \vec{\nabla} \cdot \vec{B} \quad &= \quad 0 && ~~Gauss's \; Law \; of \; Magnetism \label{eq:5}\\
+    \vec{\nabla} \times \vec{E} \quad &= \quad -\frac{\partial\vec{B}}{\partial{t}} && ~~Faraday's \; Law \; of \; Induction \label{eq:6}\\
+    \vec{\nabla} \times \vec{B} \quad &= \quad \mu_0\left(\epsilon_0\frac{\partial\vec{E}}{\partial{t}} + \vec{J}\right) && ~~Ampere's \; Circuital \; Law \label{eq:7}
+\end{align}
+Equations \ref{eq:4}, \ref{eq:5}, \ref{eq:6}, \ref{eq:7} look toxic and they are famous in physics books.
+
+\subsection{Matrix horror}
+\begin{matrix}
+    a_{11}&a_{12}&\dots&a_{1n}\\
+    a_{21}&a{22}&\dots&a_{2n}\\
+    \vdots&\vdots&\ddots&\vdots\\
+    a_{m1}&a_{m2}&\dots&a_{mn}
+\end{matrix}
+\begin{equation}
+    \begin{pmatrix}
+        a_{11}&a_{12}&\dots&a_{1n}\\
+        a_{21}&a{22}&\dots&a_{2n}\\
+        \vdots&\vdots&\ddots&\vdots\\
+        a_{m1}&a_{m2}&\dots&a_{mn}
+    \end{pmatrix}
+    \begin{bmatrix}
+        v_1\\
+        v_2\\
+        \vdots\\
+        v_n
+    \end{bmatrix}   
+    =
+    \begin{matrix}
+    w_1\\
+    w_2\\
+    \vdots\\
+    w_n
+    \end{matrix}
+\end{equation}
+
+\section{Tables and Figures}
+\begin{verbatim}
+\begin{table}[hbt!]
+    \centering
+    \caption{This is a table that shows how to create different lines as well as different justifications}
+    \begin{tabular}{|l||c|c|r|}
+        \hline
+        $x$&1&2&3\\
+        \hline
+        $f(x)$&4&8&12\\
+        f(x)&4&8&12\\
+        \hline
+    \end{tabular}
+\end{table}
+\end{verbatim}
+\begin{table}[hbt!]
+    \centering
+    \caption{This is a table that shows how to create different lines as well as different justifications}
+    \begin{tabular}{|l||c|c|r|}
+    \hline
+    $x$&1&2&3\\
+    \hline
+    $f(x)$&4&8&12\\
+    f(x)&4&8&12\\
+    \hline
+    \end{tabular}
+\end{table}
+\begin{table}[hbt!]
+    \centering
+    \caption{This is a table that shows the meaning of [hbt!]}
+    \begin{tabular}{|l|l|p{10cm}|}
+    \hline
+    Specifier&Meaning&Description\\
+    \hline
+    $h$&Here&Place the table at the exact location where it appears in the source code, if there is enough space.\\
+    $b$&Bottom&Place the table at the bottom of the current or next available page.\\
+    $t$&Top&Place the table at the top of the current or next available page.\\
+    $!$&Force&	Instructs LaTeX to ignore certain internal restrictions (such as the maximum number of floats allowed on a single page) to try harder to fit the table in the specified positions.\\
+    \hline
+    \end{tabular}
+\end{table}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{trollsmile.png}
+    \caption{Troll Smile}
+    \label{fig:trollsmile}
+\end{figure}
+
+\section{Bibliography}
+
+Well, I'm bored to the core. Let me wind this up. I wasted three hours thinking and writing things, it used almost all my brain cells. I'm done for today.\\
+\begin{thebibliography}{99}
+\bibitem{The Doc}
+\href{https://guides.nyu.edu/LaTeX/exercises}{Exercises for \LaTeX}
+\end{thebibliography}
+\end{document}
